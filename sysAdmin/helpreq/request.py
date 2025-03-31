@@ -17,7 +17,7 @@ def get_request(auth_system):
     view_help_requests(auth_system)
     
     print()
-    print("1. Back")
+    print("1. Back to Main Menu")
     while True:
         choice = input("\nChoose option (1): ")
         if choice == '1':
