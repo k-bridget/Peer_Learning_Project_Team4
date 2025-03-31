@@ -134,10 +134,8 @@ def sys_menu(auth_system):
         elif choice == '2':
             get_request(auth_system)
         elif choice == '3':
-            user()
-        elif choice == '4':
             recovered_menu(auth_system)
-        elif choice == '5':
+        elif choice == '4':
             print("Logging out....")
             break
         else:
