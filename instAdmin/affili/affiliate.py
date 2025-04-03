@@ -1,19 +1,23 @@
+from colorama import Fore, init 
+
+init(autoreset=True)
+
 def manage_doctors(auth_system):
     """Doctor management menu"""
     while True:
-        print("\n--- Doctor Management ---")
-        print("1. Add New Doctor")
-        print("2. Delete Doctor")
-        print("3. Update Credentials")
-        print("4. List All Doctors")
-        print("5. Back to Main Menu")
+        print(Fore.BLUE + "\n--- Doctor Management ---")
+        print(Fore.YELLOW + "\n1. Add New Doctor")
+        print(Fore.YELLOW  + "2. Delete Doctor")
+        print(Fore.YELLOW  + "3. Update Credentials")
+        print(Fore.YELLOW  + "4. List All Doctors")
+        print(Fore.YELLOW  + "5. Back to Main Menu")
         
-        choice = input("\nChoose option (1-5): ")
+        choice = input(Fore.BLUE  +"\nChoose option (1-5): ")
         
         if choice == '1':
             email = input("Doctor email: ")
             name = input("Full name: ")
-            password = input("Temporary password: ")
+            password = input("password: ")
             print(auth_system.add_doctor(email, name, password))
             
         elif choice == '2':
@@ -31,4 +35,4 @@ def manage_doctors(auth_system):
         elif choice == '5':
             return  # Go back to main menu
         else:
-            print("Invalid choice!")
+            print(Fore.YELLOW + "Invalid choice!")
