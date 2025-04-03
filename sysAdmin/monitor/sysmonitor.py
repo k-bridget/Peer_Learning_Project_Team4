@@ -116,7 +116,7 @@ def monitoring():
             break
         
         else:
-            print(Fore.RED + "Invalid choice! Please enter a number between 1-3.")
+            print(Fore.RED + "Invalid choice! Please try again.")
 
 if __name__ == "__main__":
     monitoring()
